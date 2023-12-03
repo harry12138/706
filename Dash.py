@@ -56,7 +56,6 @@ import plotly.express as px
 
 # Create the Dash application
 app = dash.Dash(__name__)
-server = app.server
 
 # Application layout
 app.layout = html.Div([
@@ -134,4 +133,4 @@ def update_output(n_clicks, type_, var_target_annual, confidence_level, default_
 
 # Run the application
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run_server(debug= False, host='0.0.0.0',port=5050)
